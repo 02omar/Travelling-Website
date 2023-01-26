@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
         body {
@@ -7,15 +8,17 @@
             background-repeat: no-repeat;
             background-size: 100%;
         }
+
         h1 {
             color: white;
             text-align: center;
             -webkit-text-stroke: 1px black;
         }
+
         .cont {
-            position:relative;
-            left:600px;
-            top:50px;
+            position: relative;
+            left: 600px;
+            top: 50px;
             color: white;
         }
     </style>
@@ -32,9 +35,9 @@
         <h1>Welcome</h1>
     </div>
     <h1>
-    <% if (locals.msg) { %>
-        <%= msg %>
-    <% } %>
+        <% if (locals.msg) { %>
+            <%= msg %>
+                <% } %>
     </h1>
     <div class="cont">
         <form method="POST">
@@ -47,10 +50,11 @@
             <input type="submit" value="Login">
         </form>
         <% if (locals.error) { %>
-        <%= error %>
-        <% } %>
-        <br>
-        <a href="registration">I dont have an account</a>
+            <%= error %>
+                <% } %>
+                    <br>
+                    <a href="registration">I dont have an account</a>
     </div>
 </body>
+
 </html>

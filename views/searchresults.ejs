@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
         body {
@@ -13,7 +14,8 @@
             text-align: center;
             -webkit-text-stroke: 1px blue;
         }
-        .list{
+
+        .list {
             color: white;
             text-align: center;
             -webkit-text-stroke: 1px blue;
@@ -26,6 +28,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
         <a class="navbar-brand" style="color: rgb(191, 255, 161)">Search Results</a>
@@ -44,21 +47,23 @@
         </div>
     </nav>
     <ul class="timeline">
-     <% if (locals.results) { %>
-    <% for (var i = 0; i < results.length; i++) { %>
-    <li>
-        <div>
-            <a href="<%=results[i].split(' ')[0] %>" class="list" style="text-align:left">
-            <%= results[i] %> </a>
-        </div>
-    </li>
-    <% } %>
-    <% } %>
-    <h1>
-    <% if (locals.err) { %>
-        <%= err %>
-        <% } %>
-    </h1>
-</ul>
+        <% if (locals.results) { %>
+            <% for (var i=0; i < results.length; i++) { %>
+                <li>
+                    <div>
+                        <a href="<%=results[i].split(' ')[0] %>" class="list" style="text-align:left">
+                            <%= results[i] %>
+                        </a>
+                    </div>
+                </li>
+                <% } %>
+                    <% } %>
+                        <h1>
+                            <% if (locals.err) { %>
+                                <%= err %>
+                                    <% } %>
+                        </h1>
+    </ul>
 </body>
+
 </html>
